@@ -1,16 +1,17 @@
-# Further Reading
+# 다음에 읽을 것들
 
-Now that you've finished the basics, you can move on to some more advanced sections of this tour. Or, you can check out some of the following resources:
+기초부분을 다 읽으셨으니 이제 고급 부분의 섹션으로 넘어갈 차례입니다.
+넘어가시기 전에 아래 링크들도 참고하세요:
 
-### Basic resources
+### 기본 자료
 
-* [Learn D as a beginner](http://ddili.org/ders/d.en/index.html)
-* [Learn D as an experienced programmers](http://wiki.dlang.org/Coming_From) coming from other languages
-* Quickstart with [D Tutorials](https://wiki.dlang.org/Tutorials)
-* Browse the [D Wiki](https://wiki.dlang.org/), which contains a lot of information and links
-* Explore [articles about D](http://dlang.org/articles.html)
+* [초보자를 위한 D언어](http://ddili.org/ders/d.en/index.html)
+* [전문가를 위한 D언어](http://wiki.dlang.org/Coming_From)에 다른언어를 분들을 위한 가이드 있음
+* 빠르게 시작하는 [D언어 튜토리얼](https://wiki.dlang.org/Tutorials)
+* [D언어 위키](https://wiki.dlang.org/)에도 다양한 정보와 링크 참고가능
+* [D언어 칼럼](http://dlang.org/articles.html) 찾기
 * Discover [books about D](https://wiki.dlang.org/Books), for an in-depth view
-* See [common questions about D](http://dlang.org/faq.html)
+* [D언어에 대한 자주 묻는 질문](http://dlang.org/faq.html) 확인
 
 ### In-depth resources
 

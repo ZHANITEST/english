@@ -1,25 +1,25 @@
-# Classes
+# 클래스
 
-D provides support for classes and interfaces like in Java or C++.
+D언어는 Java나 C++처럼 클래스(class)와 인터페이스(interface)를 제공합니다.
 
-Any `class` type inherits from [`Object`](https://dlang.org/phobos/object.html) implicitly.
+모든 `class` 자료형은 [`Object`](https://dlang.org/phobos/object.html)를 상속받습니다.
 
     class Foo { } // inherits from Object
     class Bar: Foo { } // Bar is a Foo too
 
-Classes in D are generally instantiated on the heap using `new`:
+D언어의 클래스는 `new`문으로 힙(heap)메모리를 사용하는 보통의 예 입니다:
 
     auto bar = new Bar;
 
-Class objects are always references types and unlike `struct` aren't
-copied by value.
+클래스 객체는 항상 참조 타입이며 `struct`와 다르게 값으로의 복사가 이루어지지 않습니다.
 
     Bar bar = foo; // bar points to foo
 
+쓰레기 수집기는 객체에 더 이상 참조가 존재하지 않을 때 메모리를 초기화 합니다.
 The garbage collector will make sure the memory is freed
 when no references to an object exist anymore.
 
-#### Inheritance
+#### 상속
 
 If a member function of a base class is overridden, the keyword
 `override` must be used to indicate that. This prevents unintentional
@@ -29,7 +29,7 @@ overriding of functions.
         override functionFromFoo() {}
     }
 
-In D, classes can only inherit from one class.
+D언의 경우 클래스는 단 하나의 클래스만 상속 받을 수 있습니다.
 
 #### Final and abstract member functions
 

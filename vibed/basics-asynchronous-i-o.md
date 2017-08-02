@@ -1,5 +1,6 @@
-# Basics & Asynchronous I/O
+# 기본내용 & 비동기 I/O
 
+vibe.d의 
 Using the default build parameters the `main()`
 function of a vibe.d application is specified
 by a special `shared static this()` module

@@ -1,31 +1,32 @@
-# Foreach
+# Foreach문
 
 {{#img-right}}dman-teacher-foreach.jpg{{/img-right}}
 
-D features a `foreach` loop which allows
-less error-prone and better readable iterations.
+D언어의 `foreach` 반복문은 열거형을 읽기 쉽게 만들어주며
+에러를 줄여주도록 해주는 기능입니다.
 
-### Element iteration
-
-Given an array `arr` of type `int[]` it is possible to
-iterate through the elements using a `foreach` loop:
+### 열거형 요소
+`int[]`타입의 `arr`배열은 `foreach`반복문을 사용해 요소를 하나씩 꺼내줍니다:
 
     foreach (int e; arr) {
         writeln(e);
     }
 
-The first field in the `foreach` definition is the variable
-name used in the loop iteration. Its type is induced automatically:
+`foreach`반복문의 첫번째 필드는 반복문에서 열거할 변수 이름을 선언합니다.
+타입은 자동으로 포함되므로 따로 지정해주지 않아도 됩니다:
 
     foreach (e; arr) {
-        // typeof(e) is int
+        // typeof(e)은 int
         writeln(e);
     }
 
-The second field must be an array - or a special iterable
-object called a **range** which will be introduced in the next section.
+두번째 필드는 반드시 배열-이거나 **range**라 부르는, 열거가능한 객체가 와야만 합니다.
+이에 대한 내용은 다음 섹션에서 소개해드리겠습니다.
 
+### 침조로서 접근
 ### Access by reference
+
+요소는 배열(array)이나 범위(range)가 열거되는 동안에 복사됩니다.
 
 Elements will be copied from the array or range during iteration.
 This is acceptable for basic types, but might be a problem for

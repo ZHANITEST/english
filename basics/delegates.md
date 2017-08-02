@@ -1,20 +1,30 @@
-# Delegates
+# 델리게이트
 
-### Functions as arguments
+### 인수로서의 함수
 
-A function can also be a parameter to another function:
+함수는 다른 함수의 인수(매개 값)로도 쓸 수 있습니다:
 
     void doSomething(int function(int, int) doer) {
-        // call passed function
+        // 전달된 함수 호출
         doer(5,5);
     }
 
-    doSomething(add); // use global function `add` here
-                      // add must have 2 int parameters
+    doSomething(add); // `add`라는 전역함수(글로벌 함수)를 호출함
+                      // add는 반드시 두 개의 int 인수가 필요
 
-`doer` can then be called like any other normal function.
+`doer`는 다른 평범한 함수들처럼 사용할 수 있습니다.
 
+### 지역함수(로컬함수)와 문맥
 ### Local functions with context
+
+방금 본 예제는 전역함수 포인터인 `function`타입을 사용했습니다.
+멤버 함수나 지역 함수는 참조 형태이며 `delegate`가 쓰입니다.
+함수 포인터는 추가적으로 함수를 *둘러 싼* 문맥에 대한 정보를 가집니다.
+다른 언어들에서 이것을 **클로저(closure)**로 부릅니다.
+예를 들어 `delegate`는 클래스의 멤버함수와 클래스 객체에서 포인터를 가리킵니다.
+`delegate`는 중첩 함수에 포함된, 둘러싼 문맥을 참조하는 대신 생성됩니다.
+그러나 D 컴파일러는 메모리 안전을 위해 자동으로 힙메모리에 문맥을 복사하고,
+델리게이트는 이 힙메모리 영역을 참조합니다.
 
 The above example uses the `function` type which is
 a pointer to a global function. As soon as a member
@@ -34,7 +44,7 @@ then a delegate will link to this heap area.
         void local() {
             writeln("local");
         }
-        auto f = &local; // f is of type delegate()
+        auto f = &local; // f의 타입은 delegate()
     }
 
 The same function `doSomething` taking a `delegate`
@@ -42,12 +52,11 @@ would look like this:
 
     void doSomething(int delegate(int,int) doer);
 
-`delegate` and `function` objects cannot be mixed. But the
-standard function
-[`std.functional.toDelegate`](https://dlang.org/phobos/std_functional.html#.toDelegate)
-converts a `function` to a `delegate`.
+`델리게이트(delegate)`와 `함수(function)` 객체는 섞일 수 없지만,
+표준라이브러리 중에 [`std.functional.toDelegate`](https://dlang.org/phobos/std_functional.html#.toDelegate)를 사용해
+`함수(function)`를 `델리게이트(delegate)`로 변환할 수는 있습니다.
 
-### Anonymous functions & Lambdas
+### 익명함수 & 람다
 
 As functions can be saved as variables and passed to other functions,
 it is laborious to give them an own name and to define them. Hence D allows

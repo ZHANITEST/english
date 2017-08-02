@@ -1,3 +1,4 @@
+# 슬라이싱
 # Slices
 
 Slices are objects from type `T[]` for any given type `T`.

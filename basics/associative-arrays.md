@@ -1,21 +1,23 @@
-# Associative Arrays
+# 연관배열
 
-D has built-in *associative arrays* also known as hash maps.
+D언어에는 우리가 해쉬 맵(hash map)이라고 알고 있는 *연관적인 배열*이라는 기능을 내장하고 있습니다.
+문자열(`string`)인 키(key)와 정수형(`int`)인 값(value)으로 이루어진 연관배열은 아래와 같이 선언합니다:
 An associative array with a key type of `string` and a value type
 of `int` is declared as follows:
 
     int[string] arr;
 
-The value can be accessed by its key and thus be set:
+키(key)를 사용해 값(value)에 접근하거나 저장도 할 수 있습니다:
 
     arr["key1"] = 10;
 
-To test whether a key is located in the associative array, the
-`in` expression can be used:
+연관배열에 해당 키(key)가 존재하는 지 확인하려면 `in`문을 사용합니다:
 
     if ("key1" in arr)
         writeln("Yes");
 
+`in` 표현식은 `null`외의 다른 포인터를 찾았을 때 값에 대란 포인터를 돌려줍니다.
+이로서 겹치는 것인지 확인하거나 
 The `in` expression returns a pointer to the value if it
 can be found or a `null` pointer otherwise. Thus existence check
 and writes can be conveniently combined:
@@ -32,7 +34,7 @@ a `.remove(val)` member to remove entries by their key.
 It is left as an exercise to the reader to explore
 the special `.byKey` and `.byValue` ranges.
 
-### In-depth
+### 더 자세하게
 
 - [Associative arrays in _Programming in D_](http://ddili.org/ders/d.en/aa.html)
 - [Associative arrays specification](https://dlang.org/spec/hash-map.html)

@@ -1,11 +1,11 @@
-# Loops
+# 반복
 
-D provides four loop constructs.
+D언어는 4가지의 반복문을 제공합니다.
 
-### 1) Classical `for` loop
+### 1) 전통적인 `for` 반복문
 
-The classical `for` loop known from C/C++ or Java
-with _initializer_, _loop condition_ and _loop statement_:
+`for`반복문은 C/C++나 Java에서 사용되는 것과 같이
+_초기화_와 _반복 조건_, _반복할 식_을 가집니다.
 
     for (int i = 0; i < arr.length; ++i) {
         ...
@@ -35,7 +35,7 @@ evaluated for the first time.
 The [`foreach` loop](basics/foreach) which will be introduced in the
 next section.
 
-#### Special keywords and labels
+#### 특별한 키워드와 라벨
 
 The special keyword `break` will immediately abort the current loop.
 In a nested loop a _label_ can be used to break of any outer loop:

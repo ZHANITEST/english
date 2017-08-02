@@ -1,7 +1,6 @@
-# Control flow
+# 흐름 제어
 
-The application's flow can be controlled conditionally with `if` and `else`
-statements:
+어플리케이션의 흐름은 `if`와 `else`문으로 제어할 수 있습니다:
 
     if (a == 5) {
         writeln("Condition is met");
@@ -30,16 +29,16 @@ It's even possible to define ranges for integral types
 using the `case START: .. case END:` syntax. Make sure to
 take a look at the source code example.
 
-### In-depth
+### 더 자세하게
 
-#### Basic references
+#### 기초 참조서
 
 - [Logical expressions in _Programming in D_](http://ddili.org/ders/d.en/logical_expressions.html)
 - [If statement in _Programming in D_](http://ddili.org/ders/d.en/if.html)
 - [Ternary expressions in _Programming in D_](http://ddili.org/ders/d.en/ternary.html)
 - [`switch` and `case` in _Programming in D_](http://ddili.org/ders/d.en/switch_case.html)
 
-#### Advanced references
+#### 고급 참조서
 
 - [Expressions in detail](https://dlang.org/spec/expression.html)
 - [If Statement specification](https://dlang.org/spec/statement.html#if-statement)

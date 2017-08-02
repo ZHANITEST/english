@@ -1,5 +1,8 @@
+# 별칭 & 문자열
 # Alias & Strings
 
+array가 무엇인지 알고 있고, `immutable`도 건드려봤으며 기본 자료형도
+빠르게 읽으셨다면, 이제 새로운 두가지 생성을 소개해드릴 차례입니다:
 Now that we know what arrays are, have gotten in touch of `immutable`
 and had a quick look at the basic types, it's time to introduce two
 new constructs in one line:
@@ -16,7 +19,7 @@ different threads. As `string` is a slice, parts can be taken out of it without
 allocating memory. The standard function `std.algorithm.splitter`
 for example splits a string by newline without any memory allocations.
 
-Besides the UTF-8 `string` there are two more types:
+UTF-8 `문자열(string)` 사이에 두 가지 더 타입이 있습니다:
 
     alias wstring = immutable(wchar)[]; // UTF-16
     alias dstring = immutable(dchar)[]; // UTF-32
